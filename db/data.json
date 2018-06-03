@@ -3,10 +3,16 @@
     "nama": "Augmented Reality",
     "waktu": "pukul 8.30 - 10.10",
     "nama2": "Pemrograman Web",
-    "waktu2": "pukul 10.30 - 12.10"
+    "waktu2": "pukul 10.30 - 12.10",
+    "nama3": "Logika",
+    "waktu3": "pukul 13.00 - 14.40"
         },
     {
     "ruang": "H-18",
-    "nama": "Metode Penelitian",
-    "waktu": "pukul 13.00 - 14.40"
+    "nama": "Cloud Computing",
+    "waktu": "pukul 8.00 - 9.40",
+    "nama2": "Matematika Diskrit",
+    "waktu2": "pukul 10.30 - 12.10",
+    "nama3": "Pendidikan Pancasila",
+    "waktu3": "pukul 13.00 - 15.10"
     }]

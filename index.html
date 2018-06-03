@@ -16,16 +16,12 @@
     <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;'>
         <!-- add a simple camera -->
         <a-entity camera></a-entity>
-        <a-marker type="barcode" value=22>
+        <a-marker type="barcode" value=23>
              <a-plane width="4" height="4" position='0 0 0' rotation="-90 0 0" color="gray">
              </a-plane>
         </a-marker>
-        <a-marker type="barcode" value=23>
-             <a-plane width="4" height="4" position='0 0 0' rotation="-90 0 0" color="white">
-             </a-plane>
-        </a-marker>
         <a-marker type="barcode" value=24>
-             <a-plane width="4" height="4" position='0 0 0' rotation="-90 0 0" color="yellow">
+             <a-plane width="4" height="4" position='0 0 0' rotation="-90 0 0" color="white">
              </a-plane>
         </a-marker>
     </a-scene>
@@ -35,25 +31,50 @@
             for (let i = 0; i < matkul.length; i++) {
                 let marker = document.createElement("a-marker");
                 marker.setAttribute("type", "barcode");
-                marker.setAttribute("value", i + 22);
-                let labelRuangan = document.createElement('a-text');
+                marker.setAttribute("value", i + 23);
+                let isi = document.createElement('a-text');
+                let isi2 = document.createElement('a-text');
+                let isi3 = document.createElement('a-text');
+
                 let labelRuangan2 = document.createElement('a-text');
+
                 let informasi = "";
+                let informasi2 = "";
+                let informasi3 = "";
+
                 let judul = "";
                 judul += "Jadwal Ruang " + matkul[i].ruang;
-                informasi += matkul[i].nama + "  " + matkul[i].waktu ;
+                informasi += "| " + matkul[i].nama + " | " + matkul[i].waktu + " |";
+                informasi2 += "| " + matkul[i].nama2 + " | " + matkul[i].waktu2 + " |";
+                informasi3 += "| " + matkul[i].nama3 + " | " + matkul[i].waktu3 + " |";
+
                 labelRuangan2.setAttribute('value', judul);
                 labelRuangan2.setAttribute('rotation', '-90 0 0');
                 labelRuangan2.setAttribute('color', 'black');
-                labelRuangan2.setAttribute('position', '0 0.5 -1.7');
+                labelRuangan2.setAttribute('position', '0 0.3 -1.7');
                 labelRuangan2.setAttribute('align', 'center');
 
-                labelRuangan.setAttribute('value', informasi);
-                labelRuangan.setAttribute('rotation', '-90 0 0');
-                labelRuangan.setAttribute('position', '0 0.5 0');
-                labelRuangan.setAttribute('color', 'green');
-                labelRuangan.setAttribute('align', 'center');
-                marker.appendChild(labelRuangan);
+                isi.setAttribute('value', informasi);
+                isi.setAttribute('rotation', '-90 0 0');
+                isi.setAttribute('position', '0 0.3 0');
+                isi.setAttribute('color', 'green');
+                isi.setAttribute('align', 'center');
+
+                isi2.setAttribute('value', informasi2);
+                isi2.setAttribute('rotation', '-90 0 0');
+                isi2.setAttribute('position', '0 0.3 0.5');
+                isi2.setAttribute('color', 'green');
+                isi2.setAttribute('align', 'center');
+
+                isi3.setAttribute('value', informasi3);
+                isi3.setAttribute('rotation', '-90 0 0');
+                isi3.setAttribute('position', '0 0.3 1');
+                isi3.setAttribute('color', 'green');
+                isi3.setAttribute('align', 'center');
+
+                marker.appendChild(isi);
+                marker.appendChild(isi2);
+                marker.appendChild(isi3);
                 marker.appendChild(labelRuangan2)
                 scenel.appendChild(marker);
             }
@@ -66,7 +87,7 @@
         scene = document.querySelector("a-scene");
 
         // Mengambil data JSON dari server
-        var url = './db/data.json'; // URL dari data JSON
+        var url = 'db/data.json'; // URL dari data JSON
         fetch(url)
             .then((resp) => resp.json())
             .then(function(data) {
