@@ -5,10 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
     <title>Jadwal Terkini</title>
-    <script src="library/aframe.min.js"></script>
+    <script src="./library/aframe.min.js"></script>
     <!-- include aframe-ar.js -->
-    <script src="library/aframe-ar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./library/aframe-ar.js"></script>
 
 </head>
 
@@ -82,7 +81,25 @@
         }
 
         // Variabel penampung nilai dari server
-        var ruanganJSON = {};
+        var ruanganJSON = [{
+            "ruang": "H-17",
+            "nama": "Augmented Reality",
+            "waktu": "pukul 8.30 - 10.10",
+            "nama2": "Pemrograman Web",
+            "waktu2": "pukul 10.30 - 12.10",
+            "nama3": "Logika",
+            "waktu3": "pukul 13.00 - 14.40"
+                },
+            {
+            "ruang": "H-18",
+            "nama": "Cloud Computing",
+            "waktu": "pukul 8.00 - 9.40",
+            "nama2": "Matematika Diskrit",
+            "waktu2": "pukul 10.30 - 12.10",
+            "nama3": "Pendidikan Pancasila",
+            "waktu3": "pukul 13.00 - 15.10"
+            }]
+        ;
 
         // mengakses DOM scene
         scene = document.querySelector("a-scene");
