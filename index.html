@@ -105,7 +105,7 @@
         scene = document.querySelector("a-scene");
 
         // Mengambil data JSON dari server
-        
+        var url = 'db/data.json';
         fetch(url)
             .then((resp) => resp.json())
             .then(function(data) {
