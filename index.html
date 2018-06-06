@@ -51,24 +51,24 @@
                 labelRuangan2.setAttribute('value', judul);
                 labelRuangan2.setAttribute('rotation', '-90 0 0');
                 labelRuangan2.setAttribute('color', 'black');
-                labelRuangan2.setAttribute('position', '0 0.3 -1.7');
+                labelRuangan2.setAttribute('position', '0 0.8 -1.7');
                 labelRuangan2.setAttribute('align', 'center');
 
                 isi.setAttribute('value', informasi);
                 isi.setAttribute('rotation', '-90 0 0');
-                isi.setAttribute('position', '0 0.3 0');
+                isi.setAttribute('position', '0 0.8 0');
                 isi.setAttribute('color', 'green');
                 isi.setAttribute('align', 'center');
 
                 isi2.setAttribute('value', informasi2);
                 isi2.setAttribute('rotation', '-90 0 0');
-                isi2.setAttribute('position', '0 0.3 0.5');
+                isi2.setAttribute('position', '0 0.8 0.5');
                 isi2.setAttribute('color', 'green');
                 isi2.setAttribute('align', 'center');
 
                 isi3.setAttribute('value', informasi3);
                 isi3.setAttribute('rotation', '-90 0 0');
-                isi3.setAttribute('position', '0 0.3 1');
+                isi3.setAttribute('position', '0 0.8 1');
                 isi3.setAttribute('color', 'green');
                 isi3.setAttribute('align', 'center');
 
@@ -105,7 +105,7 @@
         scene = document.querySelector("a-scene");
 
         // Mengambil data JSON dari server
-        var url = 'db/data.json'; // URL dari data JSON
+        
         fetch(url)
             .then((resp) => resp.json())
             .then(function(data) {
